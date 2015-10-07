@@ -49,17 +49,31 @@ class ViewController: UIViewController {
     
     // begin fading the image in
     
-        override func viewDidLayoutSubviews() {
-            camelImage.alpha = 0
-        }
-    
-        override func viewDidAppear(animated: Bool) {
-            UIView.animateWithDuration(1) { () -> Void in
-                self.camelImage.alpha = 1
-            }
-        }
+//        override func viewDidLayoutSubviews() {
+//            camelImage.alpha = 0
+//        }
+//    
+//        override func viewDidAppear(animated: Bool) {
+//            UIView.animateWithDuration(1) { () -> Void in
+//                self.camelImage.alpha = 1
+//            }
+//        }
     
     // end fading the image in.
+    
+    // begin changing the image size animation
+    
+            override func viewDidLayoutSubviews() {
+                camelImage.frame = CGRectMake(100, 20, 0, 0)
+            }
+    
+            override func viewDidAppear(animated: Bool) {
+                UIView.animateWithDuration(1) { () -> Void in
+                    self.camelImage.frame = CGRectMake(100, 20, 100, 200)
+                }
+            }
+    
+    // end changing the image size animation
 
 }
 
