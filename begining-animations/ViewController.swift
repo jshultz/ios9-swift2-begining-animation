@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var timer = NSTimer()
+    
     var filename:String = "Camel_3-1.png"
+    
+    var started = 1
 
     @IBOutlet weak var camelImage: UIImageView!
     
@@ -18,6 +22,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "doAnimation", userInfo: nil, repeats: true)
+    }
+    
+    func doAnimation() {
+        
+        filename = filename == "Camel_3-1.png" ? "Camel_3-2.png" : "Camel_3-1.png"
+        
+        camelImage.image = UIImage(named: filename)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,10 +41,20 @@ class ViewController: UIViewController {
 
     @IBAction func updateImage(sender: AnyObject) {
         
-        filename = filename == "Camel_3-1.png" ? "Camel_3-2.png" : "Camel_3-1.png"
+        if started == 1 {
+            timer.invalidate()
+            started = 0
+        } else {
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "doAnimation", userInfo: nil, repeats: true)
+            started = 1
+        }
         
         
-        camelImage.image = UIImage(named: filename)
+        
+//        filename = filename == "Camel_3-1.png" ? "Camel_3-2.png" : "Camel_3-1.png"
+//        
+//        
+//        camelImage.image = UIImage(named: filename)
     }
     
     // begin animating the image in from the left.
@@ -63,15 +87,15 @@ class ViewController: UIViewController {
     
     // begin changing the image size animation
     
-            override func viewDidLayoutSubviews() {
-                camelImage.frame = CGRectMake(100, 20, 0, 0)
-            }
-    
-            override func viewDidAppear(animated: Bool) {
-                UIView.animateWithDuration(1) { () -> Void in
-                    self.camelImage.frame = CGRectMake(100, 20, 100, 200)
-                }
-            }
+//            override func viewDidLayoutSubviews() {
+//                camelImage.frame = CGRectMake(100, 20, 0, 0)
+//            }
+//    
+//            override func viewDidAppear(animated: Bool) {
+//                UIView.animateWithDuration(1) { () -> Void in
+//                    self.camelImage.frame = CGRectMake(100, 20, 100, 200)
+//                }
+//            }
     
     // end changing the image size animation
 
