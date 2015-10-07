@@ -13,6 +13,8 @@
 		DE6227431BC4BCF20035726E /* begining_animations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE6227411BC4BCF20035726E /* begining_animations.xcdatamodeld */; };
 		DE6227451BC4BCF20035726E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6227441BC4BCF20035726E /* Assets.xcassets */; };
 		DE6227481BC4BCF20035726E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6227461BC4BCF20035726E /* LaunchScreen.storyboard */; };
+		DE6227521BC4BDAF0035726E /* Camel_3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = DE6227501BC4BDAF0035726E /* Camel_3-1.png */; settings = {ASSET_TAGS = (); }; };
+		DE6227571BC4C0E30035726E /* Camel_3-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE6227561BC4C0E30035726E /* Camel_3-2.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DE6227441BC4BCF20035726E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE6227471BC4BCF20035726E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE6227491BC4BCF20035726E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6227501BC4BDAF0035726E /* Camel_3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Camel_3-1.png"; path = "../Camel_3-1.png"; sourceTree = "<group>"; };
+		DE6227561BC4C0E30035726E /* Camel_3-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camel_3-2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			children = (
 				DE6227391BC4BCF20035726E /* begining-animations */,
 				DE6227381BC4BCF20035726E /* Products */,
+				DE6227531BC4BDB60035726E /* images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +61,24 @@
 		DE6227391BC4BCF20035726E /* begining-animations */ = {
 			isa = PBXGroup;
 			children = (
+				DE6227501BC4BDAF0035726E /* Camel_3-1.png */,
 				DE62273A1BC4BCF20035726E /* AppDelegate.swift */,
 				DE62273C1BC4BCF20035726E /* ViewController.swift */,
 				DE62273E1BC4BCF20035726E /* Main.storyboard */,
+				DE6227561BC4C0E30035726E /* Camel_3-2.png */,
 				DE6227441BC4BCF20035726E /* Assets.xcassets */,
 				DE6227461BC4BCF20035726E /* LaunchScreen.storyboard */,
 				DE6227491BC4BCF20035726E /* Info.plist */,
 				DE6227411BC4BCF20035726E /* begining_animations.xcdatamodeld */,
 			);
 			path = "begining-animations";
+			sourceTree = "<group>";
+		};
+		DE6227531BC4BDB60035726E /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +138,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6227571BC4C0E30035726E /* Camel_3-2.png in Resources */,
 				DE6227481BC4BCF20035726E /* LaunchScreen.storyboard in Resources */,
 				DE6227451BC4BCF20035726E /* Assets.xcassets in Resources */,
+				DE6227521BC4BDAF0035726E /* Camel_3-1.png in Resources */,
 				DE6227401BC4BCF20035726E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
