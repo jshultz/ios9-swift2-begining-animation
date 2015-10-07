@@ -32,6 +32,20 @@ class ViewController: UIViewController {
         
         camelImage.image = UIImage(named: filename)
     }
+    
+    // begin animating the image in from the left.
+    
+    override func viewDidLayoutSubviews() {
+        camelImage.center = CGPointMake(camelImage.center.x - 400, camelImage.center.y)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(1) { () -> Void in
+            self.camelImage.center = CGPointMake(self.camelImage.center.x + 400, self.camelImage.center.y)
+        }
+    }
+    
+    // end animating the image in from the left.
 
 }
 
